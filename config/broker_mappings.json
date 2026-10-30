@@ -1,0 +1,80 @@
+{
+  "broker_abc.csv": {
+    "broker": "Broker ABC",
+    "delimiter": ",",
+    "date_formats": [
+      "%m/%d/%Y"
+    ],
+    "columns": {
+      "tax_id": "tax_id",
+      "importer_name": "importer_name",
+      "entry_number": "entry_number",
+      "entry_line_number": "entry_line_number",
+      "entry_date": "entry_date",
+      "coo": "coo",
+      "coe": "coe",
+      "hts": "hts",
+      "part_number": "part_number",
+      "description": "description",
+      "quantity": "quantity",
+      "unit_of_measure": "unit_of_measure",
+      "value": "value",
+      "currency": "currency",
+      "supplier": "supplier",
+      "manufacturer": "manufacturer",
+      "duty_amount": "duty_amount"
+    }
+  },
+  "broker_usa.csv": {
+    "broker": "Broker USA",
+    "delimiter": ",",
+    "date_formats": [
+      "%Y-%m-%d"
+    ],
+    "columns": {
+      "Importer EIN": "tax_id",
+      "Company": "importer_name",
+      "Entry ID": "entry_number",
+      "Line": "entry_line_number",
+      "Date": "entry_date",
+      "Origin": "coo",
+      "Export Country": "coe",
+      "Tariff": "hts",
+      "Item": "part_number",
+      "Goods": "description",
+      "Units": "quantity",
+      "UOM": "unit_of_measure",
+      "Line Value": "value",
+      "CCY": "currency",
+      "Vendor": "supplier",
+      "Maker": "manufacturer",
+      "Duty": "duty_amount"
+    }
+  },
+  "broker_xyz.csv": {
+    "broker": "Broker XYZ",
+    "delimiter": ";",
+    "date_formats": [
+      "%Y/%m/%d"
+    ],
+    "columns": {
+      "Tax ID": "tax_id",
+      "Importer": "importer_name",
+      "Entry No": "entry_number",
+      "Entry Line": "entry_line_number",
+      "Entry Date": "entry_date",
+      "COO": "coo",
+      "COE": "coe",
+      "HTS Code": "hts",
+      "Part No": "part_number",
+      "Description": "description",
+      "Quantity": "quantity",
+      "Unit": "unit_of_measure",
+      "Value": "value",
+      "Currency": "currency",
+      "Supplier": "supplier",
+      "Manufacturer": "manufacturer",
+      "Duty Amount": "duty_amount"
+    }
+  }
+}

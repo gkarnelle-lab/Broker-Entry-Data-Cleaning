@@ -1,0 +1,76 @@
+record_id,broker,source_file,source_row,field,original,cleaned
+broker_abc.csv:2,Broker ABC,broker_abc.csv,2,tax_id,00-1234567,001234567
+broker_abc.csv:2,Broker ABC,broker_abc.csv,2,entry_date,09/15/2026,2026-09-15
+broker_abc.csv:2,Broker ABC,broker_abc.csv,2,coo,China,CN
+broker_abc.csv:2,Broker ABC,broker_abc.csv,2,hts,0000.00.0001,0000000001
+broker_abc.csv:2,Broker ABC,broker_abc.csv,2,unit_of_measure,pieces,PCS
+broker_abc.csv:2,Broker ABC,broker_abc.csv,2,value,$125.00,125.00
+broker_abc.csv:2,Broker ABC,broker_abc.csv,2,supplier,  demo supplier ltd  ,DEMO SUPPLIER LTD
+broker_abc.csv:3,Broker ABC,broker_abc.csv,3,tax_id,00-1234567,001234567
+broker_abc.csv:3,Broker ABC,broker_abc.csv,3,entry_date,09/15/2026,2026-09-15
+broker_abc.csv:3,Broker ABC,broker_abc.csv,3,coo,China,CN
+broker_abc.csv:3,Broker ABC,broker_abc.csv,3,hts,0000.00.0001,0000000001
+broker_abc.csv:3,Broker ABC,broker_abc.csv,3,unit_of_measure,pieces,PCS
+broker_abc.csv:3,Broker ABC,broker_abc.csv,3,value,$750.00,750.00
+broker_abc.csv:3,Broker ABC,broker_abc.csv,3,supplier,  demo supplier ltd  ,DEMO SUPPLIER LTD
+broker_abc.csv:4,Broker ABC,broker_abc.csv,4,tax_id,00-1234567,001234567
+broker_abc.csv:4,Broker ABC,broker_abc.csv,4,entry_date,09/15/2026,2026-09-15
+broker_abc.csv:4,Broker ABC,broker_abc.csv,4,coo,China,CN
+broker_abc.csv:4,Broker ABC,broker_abc.csv,4,hts,0000.00.0001,0000000001
+broker_abc.csv:4,Broker ABC,broker_abc.csv,4,unit_of_measure,pieces,PCS
+broker_abc.csv:4,Broker ABC,broker_abc.csv,4,value,$625.00,625.00
+broker_abc.csv:4,Broker ABC,broker_abc.csv,4,supplier,  n/a  ,
+broker_abc.csv:5,Broker ABC,broker_abc.csv,5,tax_id,00-1234567,001234567
+broker_abc.csv:5,Broker ABC,broker_abc.csv,5,entry_date,09/15/2026,2026-09-15
+broker_abc.csv:5,Broker ABC,broker_abc.csv,5,coo,China,CN
+broker_abc.csv:5,Broker ABC,broker_abc.csv,5,hts,0000.00.0001,0000000001
+broker_abc.csv:5,Broker ABC,broker_abc.csv,5,unit_of_measure,pieces,PCS
+broker_abc.csv:5,Broker ABC,broker_abc.csv,5,value,$500.00,500.00
+broker_abc.csv:5,Broker ABC,broker_abc.csv,5,supplier,  demo supplier ltd  ,DEMO SUPPLIER LTD
+broker_abc.csv:6,Broker ABC,broker_abc.csv,6,tax_id,00-1234567,001234567
+broker_abc.csv:6,Broker ABC,broker_abc.csv,6,entry_date,09/15/2026,2026-09-15
+broker_abc.csv:6,Broker ABC,broker_abc.csv,6,coo,China,CN
+broker_abc.csv:6,Broker ABC,broker_abc.csv,6,unit_of_measure,pieces,PCS
+broker_abc.csv:6,Broker ABC,broker_abc.csv,6,value,$375.00,375.00
+broker_abc.csv:6,Broker ABC,broker_abc.csv,6,supplier,  demo supplier ltd  ,DEMO SUPPLIER LTD
+broker_abc.csv:7,Broker ABC,broker_abc.csv,7,tax_id,00-1234567,001234567
+broker_abc.csv:7,Broker ABC,broker_abc.csv,7,entry_date,09/15/2026,2026-09-15
+broker_abc.csv:7,Broker ABC,broker_abc.csv,7,coo,China,CN
+broker_abc.csv:7,Broker ABC,broker_abc.csv,7,hts,0000.00.0001,0000000001
+broker_abc.csv:7,Broker ABC,broker_abc.csv,7,unit_of_measure,pieces,PCS
+broker_abc.csv:7,Broker ABC,broker_abc.csv,7,value,$250.00,250.00
+broker_abc.csv:7,Broker ABC,broker_abc.csv,7,supplier,  demo supplier ltd  ,DEMO SUPPLIER LTD
+broker_abc.csv:8,Broker ABC,broker_abc.csv,8,tax_id,00-1234567,001234567
+broker_abc.csv:8,Broker ABC,broker_abc.csv,8,entry_date,09/15/2026,2026-09-15
+broker_abc.csv:8,Broker ABC,broker_abc.csv,8,coo,China,CN
+broker_abc.csv:8,Broker ABC,broker_abc.csv,8,hts,0000.00.0001,0000000001
+broker_abc.csv:8,Broker ABC,broker_abc.csv,8,unit_of_measure,pieces,PCS
+broker_abc.csv:8,Broker ABC,broker_abc.csv,8,value,$125.00,125.00
+broker_abc.csv:8,Broker ABC,broker_abc.csv,8,supplier,  demo supplier ltd  ,DEMO SUPPLIER LTD
+broker_usa.csv:2,Broker USA,broker_usa.csv,2,part_number,  ,
+broker_usa.csv:2,Broker USA,broker_usa.csv,2,currency,usd,USD
+broker_usa.csv:3,Broker USA,broker_usa.csv,3,currency,usd,USD
+broker_usa.csv:4,Broker USA,broker_usa.csv,4,part_number,  ,
+broker_usa.csv:4,Broker USA,broker_usa.csv,4,currency,usd,USD
+broker_usa.csv:5,Broker USA,broker_usa.csv,5,currency,usd,USD
+broker_usa.csv:6,Broker USA,broker_usa.csv,6,currency,usd,USD
+broker_usa.csv:7,Broker USA,broker_usa.csv,7,currency,usd,USD
+broker_usa.csv:8,Broker USA,broker_usa.csv,8,part_number,  ,
+broker_usa.csv:8,Broker USA,broker_usa.csv,8,currency,usd,USD
+broker_usa.csv:9,Broker USA,broker_usa.csv,9,currency,usd,USD
+broker_xyz.csv:2,Broker XYZ,broker_xyz.csv,2,entry_date,2026/09/15,2026-09-15
+broker_xyz.csv:2,Broker XYZ,broker_xyz.csv,2,manufacturer,NULL,
+broker_xyz.csv:3,Broker XYZ,broker_xyz.csv,3,entry_date,2026/09/15,2026-09-15
+broker_xyz.csv:3,Broker XYZ,broker_xyz.csv,3,manufacturer,NULL,
+broker_xyz.csv:4,Broker XYZ,broker_xyz.csv,4,entry_date,2026/09/15,2026-09-15
+broker_xyz.csv:4,Broker XYZ,broker_xyz.csv,4,manufacturer,NULL,
+broker_xyz.csv:5,Broker XYZ,broker_xyz.csv,5,entry_date,2026/09/15,2026-09-15
+broker_xyz.csv:5,Broker XYZ,broker_xyz.csv,5,manufacturer,NULL,
+broker_xyz.csv:6,Broker XYZ,broker_xyz.csv,6,entry_date,2026/09/15,2026-09-15
+broker_xyz.csv:6,Broker XYZ,broker_xyz.csv,6,manufacturer,NULL,
+broker_xyz.csv:7,Broker XYZ,broker_xyz.csv,7,entry_date,2026/09/15,2026-09-15
+broker_xyz.csv:7,Broker XYZ,broker_xyz.csv,7,manufacturer,NULL,
+broker_xyz.csv:8,Broker XYZ,broker_xyz.csv,8,entry_date,2026/09/15,2026-09-15
+broker_xyz.csv:8,Broker XYZ,broker_xyz.csv,8,manufacturer,NULL,
+broker_xyz.csv:9,Broker XYZ,broker_xyz.csv,9,entry_date,2026/09/15,2026-09-15
+broker_xyz.csv:9,Broker XYZ,broker_xyz.csv,9,manufacturer,NULL,

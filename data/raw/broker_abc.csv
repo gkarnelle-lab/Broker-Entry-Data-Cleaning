@@ -1,0 +1,8 @@
+tax_id,importer_name,entry_number,entry_line_number,entry_date,coo,coe,hts,part_number,description,quantity,unit_of_measure,value,currency,supplier,manufacturer,duty_amount
+00-1234567,DEMO IMPORTS LLC,DEMO-000001,1,09/15/2026,China,CN,0000.00.0001,00001-A,Synthetic component,10,pieces,$125.00,USD,  demo supplier ltd  ,,25.00
+00-1234567,DEMO IMPORTS LLC,DEMO-000006,1,09/15/2026,China,CN,0000.00.0001,00006-A,Synthetic component,10,pieces,$750.00,USD,  demo supplier ltd  ,,25.00
+00-1234567,DEMO IMPORTS LLC,DEMO-000005,1,09/15/2026,China,CN,0000.00.0001,00005-A,Synthetic component,10,pieces,$625.00,USD,  n/a  ,,25.00
+00-1234567,DEMO IMPORTS LLC,DEMO-000004,1,09/15/2026,China,CN,0000.00.0001,,Synthetic component,10,pieces,$500.00,USD,  demo supplier ltd  ,,25.00
+00-1234567,DEMO IMPORTS LLC,DEMO-000003,1,09/15/2026,China,CN,,00003-A,Synthetic component,10,pieces,$375.00,USD,  demo supplier ltd  ,,25.00
+00-1234567,DEMO IMPORTS LLC,DEMO-000002,1,09/15/2026,China,CN,0000.00.0001,00002-A,Synthetic component,10,pieces,$250.00,USD,  demo supplier ltd  ,,25.00
+00-1234567,DEMO IMPORTS LLC,DEMO-000001,1,09/15/2026,China,CN,0000.00.0001,00001-A,Synthetic component,10,pieces,$125.00,USD,  demo supplier ltd  ,,25.00
