@@ -87,7 +87,3 @@ Broker ABC uses commas and US-style dates; Broker USA changes names and reverses
 - Comparing normalized business records while preserving source lineage.
 - Separating exact duplicates from conflicting records.
 - Applying explicit, testable rules and documenting unresolved quality issues.
-
-## Viewing CSVs in Excel
-
-Import CSVs using Excel's text/CSV import workflow and set identifier columns to **Text**, especially tax ID, entry number, HTS, and part number. Opening a CSV directly can cause Excel to remove leading zeros. The CSV itself preserves those zeros. Empty CSV fields represent nulls.
