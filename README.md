@@ -1,5 +1,3 @@
-# broker-entry-data-cleaning
-Standardizing fictional customs broker entry data with Python: null handling, deduplication, formatting, source tracking, and data quality reporting.
 # Broker Import Entry Data Cleaning & Standardization
 
 A beginner-friendly data analyst portfolio project that brings three inconsistent broker extracts into one traceable entry-line dataset.
@@ -47,7 +45,7 @@ The script never modifies raw files. Re-running overwrites the named result file
 
 These extracts represent the same business line, with different headers, order, and formatting:
 
-| Field | Broker A | Broker B | Standardized |
+| Field | Broker ABC | Broker USA | Standardized |
 |---|---|---|---|
 | Tax ID | `00-1234567` | `001234567` | `001234567` |
 | Entry date | `09/15/2026` | `2026-09-15` | `2026-09-15` |
@@ -70,7 +68,7 @@ src/clean.py                   Standard-library cleaning pipeline
 tests/test_clean.py             Automated behavior checks
 ```
 
-Broker A uses commas and US-style dates; Broker B changes names and reverses column order; Broker C uses semicolons, another column order, and year/month/day dates. Row order varies. The files contain missing values, placeholders, extra whitespace, exact duplicates, conflicting versions, and invalid data.
+Broker ABC uses commas and US-style dates; Broker USA changes names and reverses column order; Broker XYZ uses semicolons, another column order, and year/month/day dates. Row order varies. The files contain missing values, placeholders, extra whitespace, exact duplicates, conflicting versions, and invalid data.
 
 ## Review the results
 
@@ -89,3 +87,7 @@ Broker A uses commas and US-style dates; Broker B changes names and reverses col
 - Comparing normalized business records while preserving source lineage.
 - Separating exact duplicates from conflicting records.
 - Applying explicit, testable rules and documenting unresolved quality issues.
+
+## Viewing CSVs in Excel
+
+Import CSVs using Excel's text/CSV import workflow and set identifier columns to **Text**, especially tax ID, entry number, HTS, and part number. Opening a CSV directly can cause Excel to remove leading zeros. The CSV itself preserves those zeros. Empty CSV fields represent nulls.
