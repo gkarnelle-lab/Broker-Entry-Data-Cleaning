@@ -6,6 +6,20 @@ A beginner-friendly data analyst portfolio project that brings three inconsisten
 
 All records, brokers, suppliers, tax IDs, entry numbers, and tariff codes are fictional. Tariff codes are intentionally synthetic identifiers, not verified classifications. This project demonstrates data engineering rules, not customs compliance or filing validation.
 
+## Business scenario
+
+A company receives monthly import entry reports from Broker ABC, Broker USA, and Broker XYZ. Each broker handles different entries for the same importer. The analyst combines the reports into a consistent dataset for review and analysis.
+
+Each sample file is a combined monthly extract. Overlapping exports can repeat a line, and revised exports can report a different value or fill a previously blank part number. These issues occur within a broker's data, not because three brokers handled the same entry.
+
+| Broker | Entries handled | Example quality issue |
+|---|---|---|
+| Broker ABC | DEMO-000001 through DEMO-000003 | Repeated line and differing value versions |
+| Broker USA | DEMO-000004 through DEMO-000006 | Repeated lines and blank-versus-populated part number versions |
+| Broker XYZ | DEMO-000007 through DEMO-000009 | Invalid quantity, HTS, and currency |
+
+There are nine distinct entries, each with two entry lines before duplicates and revisions. No entry is shared across brokers. Without revision timestamps or broker confirmation, differing versions are kept for review rather than assumed to be corrections.
+
 ## Results from the included example
 
 | Measure | Result |
@@ -16,7 +30,7 @@ All records, brokers, suppliers, tax IDs, entry numbers, and tariff codes are fi
 | Conflicting rows retained for review | 4 |
 | Rows needing review, including conflicts | 13 |
 | Allowed blank part numbers in retained rows | 4 |
-| Standardized cells across all input rows | 75 |
+| Standardized cells across all input rows | 79 |
 
 The intentionally small dataset makes every decision easy to inspect. A review flag is a useful output: cleaning should expose unresolved problems rather than conceal them.
 
@@ -43,18 +57,19 @@ The script never modifies raw files. Re-running overwrites the named result file
 
 ## Before and after
 
-These extracts represent the same business line, with different headers, order, and formatting:
+These are formatting examples from different brokers, not matching transactions:
 
-| Field | Broker ABC | Broker USA | Standardized |
-|---|---|---|---|
-| Tax ID | `00-1234567` | `001234567` | `001234567` |
-| Entry date | `09/15/2026` | `2026-09-15` | `2026-09-15` |
-| COO | `China` | `CN` | `CN` |
-| Synthetic HTS | `0000.00.0001` | `0000000001` | `0000000001` |
-| Value | `$125.00` | `125.00` | `125.00` |
-| Supplier | `  demo supplier ltd  ` | `DEMO SUPPLIER LTD` | `DEMO SUPPLIER LTD` |
+| Field | Broker ABC raw → cleaned | Broker USA raw → cleaned |
+|---|---|---|
+| Entry / line | `DEMO-000001` / `1` → unchanged | `DEMO-000004` / `2` → unchanged |
+| Tax ID | `00-1234567` → `001234567` | `001234567` → unchanged |
+| Entry date | `09/15/2026` → `2026-09-15` | `2026-09-15` → unchanged |
+| COO | `China` → `CN` | `CN` → unchanged |
+| Synthetic HTS | `0000.00.0001` → `0000000001` | `0000000001` → unchanged |
+| Value | `$125.00` → `125.00` | `1000.00` → unchanged |
+| Part number | `00001-A` → unchanged | whitespace → null (allowed) |
 
-The full business fields must match after normalization before an automatic duplicate removal occurs. A shared match key with a different value or part number becomes a conflict. A blank part number never acts as a match key.
+The matching key is **broker + tax ID + entry number + entry line number**. All 18 business fields must match within that broker before automatic duplicate removal. A different value or part number on the same key becomes a conflict. A blank part number is allowed and never acts as a match key.
 
 ## What is included
 
