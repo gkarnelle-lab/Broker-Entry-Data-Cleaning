@@ -1,14 +1,14 @@
 record_id,broker,source_file,source_row,field,issue,original
-broker_abc.csv:4,Broker ABC,broker_abc.csv,4,supplier,required value missing,  n/a  
-broker_abc.csv:6,Broker ABC,broker_abc.csv,6,hts,required value missing,
-broker_usa.csv:4,Broker USA,broker_usa.csv,4,tax_id,required value missing,
-broker_usa.csv:6,Broker USA,broker_usa.csv,6,coo,unmapped country; expand reviewed lookup,Atlantis
-broker_usa.csv:7,Broker USA,broker_usa.csv,7,value,invalid number; expected US numeric format,unknown
-broker_usa.csv:9,Broker USA,broker_usa.csv,9,entry_date,invalid date for configured broker formats,2026-02-30
-broker_xyz.csv:5,Broker XYZ,broker_xyz.csv,5,currency,unsupported demo currency,???
-broker_xyz.csv:6,Broker XYZ,broker_xyz.csv,6,hts,expected 10 digits under demo rules,12345
-broker_xyz.csv:8,Broker XYZ,broker_xyz.csv,8,quantity,negative amount or quantity requires review,-4
-broker_abc.csv:7,Broker ABC,broker_abc.csv,7,value,conflicting entry line: value,
-broker_xyz.csv:3,Broker XYZ,broker_xyz.csv,3,value,conflicting entry line: value,
-broker_usa.csv:8,Broker USA,broker_usa.csv,8,part_number,conflicting entry line: part_number,
-broker_xyz.csv:2,Broker XYZ,broker_xyz.csv,2,part_number,conflicting entry line: part_number,
+broker_abc.csv:5,Broker ABC,broker_abc.csv,5,supplier,required value missing,  n/a  
+broker_abc.csv:7,Broker ABC,broker_abc.csv,7,hts,required value missing,
+broker_usa.csv:5,Broker USA,broker_usa.csv,5,tax_id,required value missing,
+broker_usa.csv:7,Broker USA,broker_usa.csv,7,coo,unmapped country; expand reviewed lookup,Atlantis
+broker_usa.csv:8,Broker USA,broker_usa.csv,8,value,invalid number; expected US numeric format,unknown
+broker_usa.csv:10,Broker USA,broker_usa.csv,10,entry_date,invalid date for configured broker formats,2026-02-30
+broker_xyz.csv:3,Broker XYZ,broker_xyz.csv,3,currency,unsupported demo currency,???
+broker_xyz.csv:4,Broker XYZ,broker_xyz.csv,4,hts,expected 10 digits under demo rules,12345
+broker_xyz.csv:6,Broker XYZ,broker_xyz.csv,6,quantity,negative amount or quantity requires review,-4
+broker_abc.csv:2,Broker ABC,broker_abc.csv,2,value,conflicting entry line: value,
+broker_abc.csv:8,Broker ABC,broker_abc.csv,8,value,conflicting entry line: value,
+broker_usa.csv:2,Broker USA,broker_usa.csv,2,part_number,conflicting entry line: part_number,
+broker_usa.csv:4,Broker USA,broker_usa.csv,4,part_number,conflicting entry line: part_number,

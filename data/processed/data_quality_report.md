@@ -10,7 +10,7 @@ Synthetic demonstration data only.
 | Conflicting rows retained | 4 |
 | Rows needing review | 13 |
 | Allowed blank part numbers | 4 |
-| Changed cells | 75 |
+| Changed cells | 79 |
 
 ## Completeness
 

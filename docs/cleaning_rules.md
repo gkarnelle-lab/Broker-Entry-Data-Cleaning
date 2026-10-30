@@ -2,7 +2,7 @@
 
 ## Grain and scope
 
-One row represents one broker-reported import entry line, not a shipment total. This demo defines `entry_date` as the entry date supplied by the broker and `value` as that line's declared value in the specified currency. Real integrations must confirm both meanings before mapping. Do not substitute invoice totals, payment dates, or settlement dates.
+One row represents one broker-reported import entry line, not a shipment total. Each broker handles separate entries for the same importer, with two lines per entry. Each file represents a combined monthly extract that may include overlapping exports and revised versions. No sample entry appears under multiple brokers. This demo defines `entry_date` as the entry date supplied by the broker and `value` as that line's declared value in the specified currency. Real integrations must confirm both meanings before mapping. Do not substitute invoice totals, payment dates, or settlement dates.
 
 No external tariff lookup, country registry, broker API, or official entry verification is performed. Tax IDs are modeled as nine-digit US EIN-style identifiers for this example only. Country and unit lookups are deliberately small reviewed demo lists; unmatched values are retained and flagged. These are project assumptions, not universal broker or customs requirements.
 
@@ -33,10 +33,10 @@ No external tariff lookup, country registry, broker API, or official entry verif
 ## Deduplication and conflicts
 
 1. Normalize all business fields while retaining file and source-record provenance.
-2. Require a nonblank, structurally valid key: tax ID + entry number + entry line number. Without it, retain the row even if its contents repeat.
-3. Remove an exact normalized match only when **all 18 business fields** match. Broker and provenance fields are excluded from the comparison.
+2. Require a nonblank, structurally valid key: broker + tax ID + entry number + entry line number. Without it, retain the row even if its contents repeat.
+3. Within the same broker, remove an exact normalized match only when **all 18 business fields** match. Broker identity is included; file and row provenance are excluded. Never automatically merge records across brokers.
 4. Record every removed record's ID and its retained record ID. The first record in sorted file and source-record order is kept. This is deterministic retention, not broker authority.
-5. Group retained rows by valid key. If multiple versions remain, flag every version and list the differing fields. Preserve all versions, including blank-versus-populated part number conflicts.
+5. Group retained rows by valid key within the same broker. If multiple versions remain, flag every version and list the differing fields. Preserve all versions, including blank-versus-populated part number conflicts. File order does not establish which version is newer. Revision timestamps are unavailable in this demo, so no final version is automatically selected.
 
 This assumes duplicate extracts of the same entries rather than independent transactions that merely look similar. An entry-line key is a matching candidate, not proof of global uniqueness: amendments, additional detail lines, years, and source systems may require more keys. Identical records containing other validation problems can still be removed if the key is valid; the retained copy remains flagged. No fuzzy deduplication or automatic conflict resolution occurs.
 

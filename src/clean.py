@@ -20,7 +20,7 @@ COUNTRIES = {'us': 'US', 'usa': 'US', 'united states': 'US', 'cn': 'CN',
 REQUIRED = {'tax_id', 'importer_name', 'entry_number', 'entry_line_number',
             'entry_date', 'coo', 'coe', 'hts', 'quantity', 'unit_of_measure',
             'value', 'currency', 'supplier'}
-KEY = ['tax_id', 'entry_number', 'entry_line_number']
+KEY = ['broker', 'tax_id', 'entry_number', 'entry_line_number']
 
 
 def normalize(field, raw, config):
@@ -126,10 +126,10 @@ def run(input_dir, output_dir, mapping_path):
                 row['_key_valid'] = all(row[k] and k not in invalid for k in KEY)
                 records.append(row)
 
-    # First remove exact normalized business records. Broker provenance is retained separately.
+    # Compare normalized business records only within the same broker.
     seen, retained, duplicate_log = {}, [], []
     for row in records:
-        signature = tuple(row[f] for f in FIELDS)
+        signature = (row['broker'],) + tuple(row[f] for f in FIELDS)
         if row['_key_valid'] and signature in seen:
             keeper = seen[signature]
             duplicate_log.append({'removed_record_id': row['record_id'],

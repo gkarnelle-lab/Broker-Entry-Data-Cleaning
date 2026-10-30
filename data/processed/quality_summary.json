@@ -5,7 +5,7 @@
   "conflicting_rows_retained": 4,
   "rows_needing_review": 13,
   "allowed_blank_part_numbers": 4,
-  "changed_cells": 75,
+  "changed_cells": 79,
   "nulls_before": {
     "tax_id": 1,
     "importer_name": 0,
