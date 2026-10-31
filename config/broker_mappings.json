@@ -52,7 +52,7 @@
     }
   },
   "broker_xyz.csv": {
-    "broker": "Broker XYZ",
+    "broker": "Ziggy & Co. Customs Brokerage",
     "delimiter": ";",
     "date_formats": [
       "%Y/%m/%d"
