@@ -8,7 +8,7 @@ All records, brokers, suppliers, tax IDs, entry numbers, and tariff codes are fi
 
 ## Business scenario
 
-A company receives monthly import entry reports from Broker ABC, Broker USA, and Broker XYZ. Each broker handles different entries for the same importer. The analyst combines the reports into a consistent dataset for review and analysis.
+A company receives monthly import entry reports from Broker ABC, Broker USA, and Ziggy & Co. Customs Brokerage. Each broker handles different entries for the same importer. The analyst combines the reports into a consistent dataset for review and analysis.
 
 Each sample file is a combined monthly extract. Overlapping exports can repeat a line, and revised exports can report a different value or fill a previously blank part number. These issues occur within a broker's data, not because three brokers handled the same entry.
 
@@ -16,7 +16,7 @@ Each sample file is a combined monthly extract. Overlapping exports can repeat a
 |---|---|---|
 | Broker ABC | DEMO-000001 through DEMO-000003 | Repeated line and differing value versions |
 | Broker USA | DEMO-000004 through DEMO-000006 | Repeated lines and blank-versus-populated part number versions |
-| Broker XYZ | DEMO-000007 through DEMO-000009 | Invalid quantity, HTS, and currency |
+| Ziggy & Co. Customs Brokerage | DEMO-000007 through DEMO-000009 | Invalid quantity, HTS, and currency |
 
 There are nine distinct entries, each with two entry lines before duplicates and revisions. No entry is shared across brokers. Without revision timestamps or broker confirmation, differing versions are kept for review rather than assumed to be corrections.
 
@@ -83,7 +83,7 @@ src/clean.py                   Standard-library cleaning pipeline
 tests/test_clean.py             Automated behavior checks
 ```
 
-Broker ABC uses commas and US-style dates; Broker USA changes names and reverses column order; Broker XYZ uses semicolons, another column order, and year/month/day dates. Row order varies. The files contain missing values, placeholders, extra whitespace, exact duplicates, conflicting versions, and invalid data.
+Broker ABC uses commas and US-style dates; Broker USA changes names and reverses column order; Ziggy & Co. Customs Brokerage uses semicolons, another column order, and year/month/day dates. Row order varies. The files contain missing values, placeholders, extra whitespace, exact duplicates, conflicting versions, and invalid data.
 
 ## Review the results
 
