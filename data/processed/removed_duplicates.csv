@@ -1,4 +1,4 @@
 removed_record_id,retained_record_id,reason
-broker_abc.csv:9,broker_abc.csv:3,exact normalized business record
-broker_usa.csv:6,broker_usa.csv:3,exact normalized business record
-broker_usa.csv:9,broker_usa.csv:4,exact normalized business record
+broker_abc.csv:8,broker_abc.csv:2,exact normalized business record
+broker_usa.csv:2,broker_abc.csv:5,exact normalized business record
+broker_usa.csv:3,broker_abc.csv:2,exact normalized business record
