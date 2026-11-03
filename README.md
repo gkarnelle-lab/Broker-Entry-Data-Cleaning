@@ -1,9 +1,5 @@
 # Broker Import Entry Data Cleaning & Standardization
 
-**An Enterprise-Inspired Data Quality, Governance & Customs Operations Portfolio Project**
-
-A Python-based data cleaning pipeline that consolidates inconsistent customs broker extracts into a standardized, traceable import entry-line dataset.
-
 The project demonstrates how structured data quality controls, documented transformation rules, exception reporting, and source traceability can support reliable customs operations and downstream compliance review.
 
 **Core Focus:** Data standardization | Data governance | Exception management | Data quality controls | Audit support
